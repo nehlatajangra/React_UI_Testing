@@ -4,6 +4,10 @@ require('chromedriver')
 const {fireEvent,screen}= require('@testing-library/react')
 debugger;
 
+const options = new chrome.Options()
+options.addArguments('--disable-dev-shm-usage')
+
+
 const rootURL = 'http://52.226.220.141:3000/'
 
 const d = new Builder().forBrowser('chrome').build()
