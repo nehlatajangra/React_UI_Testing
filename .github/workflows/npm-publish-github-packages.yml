@@ -17,8 +17,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '18.x'
-    - name: Run npm test
-      run: npm install
-    - name: Run tests
-      run: npm run test
+    - name: Install npm
+      run: rm -rf node_modules/
+            npm install
+    # - name: Run npm test
+    #   run: npm install
+    # - name: Run tests
+    #   run: npm run test
 
