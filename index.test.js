@@ -56,7 +56,6 @@ test('click on brand tab ',async()=>{
 
 test('click on Dove ',async()=>{
   setTimeout(async function() {
-    console.log('This printed after about 1 second');
     dove_btn= await getElementByXPath("//a[@id='Dove']");
     await dove_btn.click();
   }, 2000);
@@ -66,7 +65,6 @@ test('click on Dove ',async()=>{
 
 
 test('click on shampoo to add to the cart',async()=>{
-    console.log('This printed after about 1 second');
     shampoo=await getElementByXPath("//button[@id='Shampoo']");
   await shampoo.click();
   
