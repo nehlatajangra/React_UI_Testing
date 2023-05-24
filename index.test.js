@@ -55,27 +55,41 @@ test('click on brand tab ',async()=>{
 })
 
 test('click on Dove ',async()=>{
-  dove_btn=await getElementByXPath("//a[@id='Dove']");
-  await dove_btn.click();
-},20000)
+  setTimeout(async function() {
+    console.log('This printed after about 1 second');
+    dove_btn= await getElementByXPath("//a[@id='Dove']");
+    await dove_btn.click();
+  }, 2000);
+
+  }
+  )
 
 
 test('click on shampoo to add to the cart',async()=>{
-  shampoo=await getElementByXPath("//button[@id='Shampoo']");
+    console.log('This printed after about 1 second');
+    shampoo=await getElementByXPath("//button[@id='Shampoo']");
   await shampoo.click();
+  
 })
 
 test('go to cart',async()=>{
+  setTimeout(async function() {
+
   cart_btn=await getElementByXPath("//a[contains(text(),'Cart')]");
   await cart_btn.click();
+}, 2000);
+
 })
 
 test("PROCEED TO CHECKOUT",async()=>{
+  
   proceed_btn=await getElementByXPath("//button[contains(text(),'PROCEED TO CHECKOUT')]");
   await proceed_btn.click();
 })
 
 test("fill the details",async()=>{
+  setTimeout(async function() {
+
   fname=await getElementByXPath("//*[@name='firstname']");
   await fname.sendKeys("Neha");
   lname=await getElementByXPath("//*[@name='lastname']");
@@ -84,11 +98,17 @@ test("fill the details",async()=>{
   await phone.sendKeys("1234567891");
   email=await getElementByXPath("//*[@name='email']");
   await email.sendKeys("abc@gmail.com");
+}, 2000);
+
 })
 
 test("Proceed to pay",async()=>{
+  setTimeout(async function() {
+
   submit_btn= await getElementByXPath("//button[contains(text(),'Proceed To Pay')]");
   await submit_btn.click();
+  }, 2000);
+
 })
 
 // it('close the browser', () => {

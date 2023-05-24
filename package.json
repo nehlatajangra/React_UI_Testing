@@ -9,6 +9,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@testing-library/react": "^14.0.0"
+    "@testing-library/react": "^14.0.0",
+    "duration": "^0.2.2",
+    "ejs": "^3.1.9"
   }
 }

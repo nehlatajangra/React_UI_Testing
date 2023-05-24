@@ -2,10 +2,10 @@ name: Testing
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +16,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '18.x'
-    - name: Run npm 
+    - name: Run npm test
       run: npm
     - name: Run tests
       run: npm  test
+
